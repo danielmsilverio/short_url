@@ -82,7 +82,7 @@ defmodule ShortUrl.Services.Shorten do
   end
 
   def get_url_by_code!(code) do
-    id = decode_url(code)
+    id = UrlParser.decode_url(code)
 
     Url
     |> Repo.get!(id)
@@ -90,26 +90,12 @@ defmodule ShortUrl.Services.Shorten do
   end
 
   defp build_url(%Url{id: id} = url) do
-    code_url = encode_url(id)
-    short_url = generate_short_url(code_url)
+    code_url = UrlParser.encode_url(id)
+    short_url = UrlParser.generate_short_url(code_url)
 
     Map.merge(url, %{
       code_url: code_url,
       short_url: short_url
     })
   end
-
-  defp encode_url(id) do
-    id
-    |> Integer.to_string()
-    |> Base.encode64()
-  end
-
-  defp decode_url(encod) do
-    encod
-    |> Base.decode64!()
-    |> String.to_integer()
-  end
-
-  defp generate_short_url(code_url), do: ShortUrlWeb.Endpoint.url() <> "/" <> code_url
 end
