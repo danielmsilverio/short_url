@@ -1,18 +1,55 @@
-# ShortUrl
+# ShortURL
 
-To start your Phoenix server:
+![Badge em Desenvolvimento](https://img.shields.io/badge/status-em_desenvolvimento-green)
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+> Este é um projeto de estudos, com a finalidade de demonstrar minha familiaridade com a linguagem elixir e outros pontos de interesse.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+ShortURL é uma api para criar um encurtador de urls.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+# Funcionalidades do Projeto
+- `CRUD usuário`: possível criar/ver/atualizar/deletar dados do usuário
+- `Criar encurtador da url`: possível encurtar uma URL, onde é associada ao usuário
 
-## Learn more
+# Como iniciar o projeto
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+- Execute `mix setup` para instalar as dependencias
+- Para iniciar o serviço, execute `mix phx.server`
+
+Agora é possível executar comandos básicos:
+
+```shell
+curl --request POST \
+  --url http://localhost:4000/api/users \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"user": {
+		"name": "Daniel",
+		"email": "daniel@teste.com",
+		"password": "teste"
+	}
+}'
+```
+resultado esperado:
+```json
+{
+	"data": {
+		"id": 1,
+		"name": "Daniel",
+		"email": "daniel@teste.com"
+	}
+}
+```
+
+# Testes
+- Para executar os testes, é necessário apenas rodar `mix test`
+
+# Tecnologias utilizadas
+- Erlang/OTP 26
+- Elixir 1.15.7
+
+# Melhorias a ser realizado
+
+- [ ] Adicionar autentificação
+- [ ] Alterar para rodar em docker
+- [ ] Adicionar pipeline CI/CD
+- [ ] Ajustar para apróximar de Clean Architecture
