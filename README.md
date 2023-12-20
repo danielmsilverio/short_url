@@ -44,8 +44,11 @@ resultado esperado:
 - Para executar os testes, é necessário apenas rodar `mix test`
 
 # Tecnologias utilizadas
-- Erlang/OTP 26
-- Elixir 1.15.7
+
+![Elixir](https://img.shields.io/badge/Elixir-4B275F?style=for-the-badge&logo=elixir&logoColor=white)
+![Postgres](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Githubactions](https://img.shields.io/badge/Github%20Actions-282a2e?style=for-the-badge&logo=githubactions&logoColor=367cfe)
+
 
 # Melhorias a ser realizado
 
