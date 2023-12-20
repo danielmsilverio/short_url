@@ -5,7 +5,7 @@ defmodule ShortUrl.ShortenTest do
   alias ShortUrl.Shorten
 
   describe "urls" do
-    alias ShortUrl.Shorten.Url
+    alias ShortUrl.Entities.Url
 
     @invalid_attrs %{short_url: nil, url: nil}
 

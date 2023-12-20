@@ -6,7 +6,7 @@ defmodule ShortUrl.Shorten do
   import Ecto.Query, warn: false
   alias ShortUrl.Repo
 
-  alias ShortUrl.Shorten.Url
+  alias ShortUrl.Entities.Url
 
   @doc """
   Gets a single url.

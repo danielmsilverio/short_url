@@ -1,5 +1,5 @@
 defmodule ShortUrlWeb.UserJSON do
-  alias ShortUrl.Accounts.User
+  alias ShortUrl.Entities.User
 
   @doc """
   Renders a list of users.

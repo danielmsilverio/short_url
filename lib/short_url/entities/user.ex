@@ -1,4 +1,4 @@
-defmodule ShortUrl.Accounts.User do
+defmodule ShortUrl.Entities.User do
   use Ecto.Schema
   import Ecto.Changeset
   import Ecto.Changeset
@@ -8,7 +8,7 @@ defmodule ShortUrl.Accounts.User do
     field :name, :string
     field :email, :string
     field :password, :string
-    has_many :urls, ShortUrl.Shorten.Url
+    has_many :urls, ShortUrl.Entities.Url
 
     timestamps(type: :utc_datetime)
   end

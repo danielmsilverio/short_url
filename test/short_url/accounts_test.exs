@@ -5,7 +5,7 @@ defmodule ShortUrl.AccountsTest do
   alias ShortUrl.Accounts
 
   describe "users" do
-    alias ShortUrl.Accounts.User
+    alias ShortUrl.Entities.User
 
     @invalid_attrs %{name: nil, email: nil, password: nil}
 

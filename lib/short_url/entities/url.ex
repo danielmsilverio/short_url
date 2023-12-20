@@ -1,10 +1,10 @@
-defmodule ShortUrl.Shorten.Url do
+defmodule ShortUrl.Entities.Url do
   use Ecto.Schema
   import Ecto.Changeset
 
   schema "urls" do
     field :url, :string
-    belongs_to :user, ShortUrl.Accounts.User
+    belongs_to :user, ShortUrl.Entities.User
 
     timestamps(type: :utc_datetime)
   end

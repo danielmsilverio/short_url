@@ -2,7 +2,7 @@ defmodule ShortUrlWeb.UserController do
   use ShortUrlWeb, :controller
 
   alias ShortUrl.Accounts
-  alias ShortUrl.Accounts.User
+  alias ShortUrl.Entities.User
 
   action_fallback ShortUrlWeb.FallbackController
 

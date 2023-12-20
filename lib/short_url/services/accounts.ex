@@ -7,7 +7,7 @@ defmodule ShortUrl.Accounts do
   alias Hex.API.User
   alias ShortUrl.Repo
 
-  alias ShortUrl.Accounts.User
+  alias ShortUrl.Entities.User
 
   @doc """
   Gets a single user.
@@ -88,5 +88,21 @@ defmodule ShortUrl.Accounts do
   """
   def change_user(%User{} = user, attrs \\ %{}) do
     User.changeset(user, attrs)
+  end
+
+  def get_token(email, password) do
+    # with {:ok, user} = Repo.get_by(User, [email: email]) do
+    #   if authentication(user, password) do
+
+    #   end
+    # end
+  end
+
+  defp authentication(user, password) do
+    # password_hash = user.password
+    # {:ok, hash} = .hashpw(password, password_hash)
+
+    # :unicode.characters_to_binary(generated_hash) ==
+    #   :unicode.characters_to_binary(password_hash)
   end
 end
