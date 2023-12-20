@@ -6,11 +6,11 @@
 
 ShortURL é uma api para criar um encurtador de urls.
 
-# Funcionalidades do Projeto
+# ⚙️ Funcionalidades do Projeto
 - `CRUD usuário`: possível criar/ver/atualizar/deletar dados do usuário
 - `Criar encurtador da url`: possível encurtar uma URL, onde é associada ao usuário
 
-# Como iniciar o projeto
+# ▶️ Como iniciar o projeto
 
 - Execute `mix setup` para instalar as dependencias
 - Para iniciar o serviço, execute `mix phx.server`
@@ -40,17 +40,17 @@ resultado esperado:
 }
 ```
 
-# Testes
+# 🧪 Rodando os testes
 - Para executar os testes, é necessário apenas rodar `mix test`
 
-# Tecnologias utilizadas
+# 🛠️ Tecnologias utilizadas
 
 ![Elixir](https://img.shields.io/badge/Elixir-4B275F?style=for-the-badge&logo=elixir&logoColor=white)
 ![Postgres](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Githubactions](https://img.shields.io/badge/Github%20Actions-282a2e?style=for-the-badge&logo=githubactions&logoColor=367cfe)
 
 
-# Melhorias a ser realizado
+# 🆙 Melhorias a serem realizados
 
 - [ ] Adicionar autentificação
 - [ ] Alterar para rodar em docker
