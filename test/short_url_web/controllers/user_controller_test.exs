@@ -1,7 +1,7 @@
 defmodule ShortUrlWeb.UserControllerTest do
   use ShortUrlWeb.ConnCase
 
-  alias ShortUrl.Accounts
+  alias ShortUrl.Services.Accounts
   alias ShortUrl.Factory
 
   @create_attrs %{

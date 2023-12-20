@@ -1,8 +1,8 @@
-defmodule ShortUrl.ShortenTest do
+defmodule ShortUrl.Services.ShortenTest do
   alias ShortUrl.Factory
   use ShortUrl.DataCase
 
-  alias ShortUrl.Shorten
+  alias ShortUrl.Services.Shorten
 
   describe "urls" do
     alias ShortUrl.Entities.Url

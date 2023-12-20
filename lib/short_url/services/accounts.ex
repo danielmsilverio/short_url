@@ -1,4 +1,4 @@
-defmodule ShortUrl.Accounts do
+defmodule ShortUrl.Services.Accounts do
   @moduledoc """
   The Accounts context.
   """

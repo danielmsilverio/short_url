@@ -1,8 +1,8 @@
-defmodule ShortUrl.AccountsTest do
+defmodule ShortUrl.Services.AccountsTest do
   alias ShortUrl.Factory
   use ShortUrl.DataCase
 
-  alias ShortUrl.Accounts
+  alias ShortUrl.Services.Accounts
 
   describe "users" do
     alias ShortUrl.Entities.User

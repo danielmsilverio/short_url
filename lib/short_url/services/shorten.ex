@@ -1,9 +1,10 @@
-defmodule ShortUrl.Shorten do
+defmodule ShortUrl.Services.Shorten do
   @moduledoc """
   The Shorten context.
   """
 
   import Ecto.Query, warn: false
+  alias ShortUrl.Services.UrlParser
   alias ShortUrl.Repo
 
   alias ShortUrl.Entities.Url
