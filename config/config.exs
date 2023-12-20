@@ -7,7 +7,6 @@
 # General application configuration
 import Config
 
-
 config :short_url,
   ecto_repos: [ShortUrl.Repo],
   generators: [timestamp_type: :utc_datetime]
