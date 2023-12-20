@@ -1,6 +1,7 @@
 defmodule ShortUrlWeb.UserControllerTest do
   use ShortUrlWeb.ConnCase
 
+  alias ShortUrl.Accounts
   alias ShortUrl.Factory
 
   @create_attrs %{
@@ -29,9 +30,10 @@ defmodule ShortUrlWeb.UserControllerTest do
       assert %{
                "id" => ^id,
                "email" => "some email",
-               "name" => "some name",
-               "password" => password
+               "name" => "some name"
              } = json_response(conn, 200)["data"]
+
+      %{password: password} = Accounts.get_user!(id)
 
       assert Bcrypt.verify_pass("some password", password)
     end
@@ -53,9 +55,10 @@ defmodule ShortUrlWeb.UserControllerTest do
       assert %{
                "id" => ^id,
                "email" => "some updated email",
-               "name" => "some updated name",
-               "password" => password
+               "name" => "some updated name"
              } = json_response(conn, 200)["data"]
+
+      %{password: password} = Accounts.get_user!(id)
 
       assert Bcrypt.verify_pass("some updated password", password)
     end
